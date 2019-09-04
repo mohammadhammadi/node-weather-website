@@ -19,7 +19,7 @@ weatherForm.addEventListener('submit',(e) => {
             messageOne.textContent = data.error
             return
         }
-        messageOne.textContent = data.location
+        messageOne.textContent = data.location + data.forecastData.timezone
         messageTwo.textContent = data.forecastData.summary + 'It is currently ' + data.forecastData.temperature + ' degrees out. There is a ' + data.forecastData.sprecip + '% chance of rain.'
         
     })
